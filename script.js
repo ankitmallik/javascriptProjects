@@ -1,18 +1,11 @@
-async function test() {
-    try {
-        console.log("hey2");
-        const result = await fetch('https://google.com');
-        console.log("hey3");
-        console.log("Result :", result);
-        return result;
 
-    } catch (error) {
-        console.log(error);
-    }
+const url = 'http://localhost:4500/test';
 
-}
+(async () => {
 
+    const response = await fetch(url);
+    const data = await response.json();
 
-test();
-console.log("hey");
+    console.log("Data from Server :",data);
 
+})()
