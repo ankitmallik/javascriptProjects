@@ -8,24 +8,27 @@
 </head>
 
 <body>
-
     <script>
-        const a = 51;
-        const b = 81;
-        const c = 10;
-
-        if (a > b && a > c) {
-            console.log('a is largest number');
+        
+        const alpha = "AABBAA";
+        function check(str) {
+            let start = 0;
+            let end = str.length - 1;
+            while (str[start] == str[end] && start <= end) {
+                start++;
+                end--;
+            }
+            if (end < start) {
+                return true;
+            }
+            return false;
+        }
+        if (check(alpha)) {
+            console.log('palindrome number');
 
         }
-
-        if(b>c && b>a)
-        {
-            console.log('b is the largest number');
-        }
-        if(c>a && c>b)
-        {
-            console.log('c is the greatest number');
+        else {
+            console.log('not palendrome number');
         }
     </script>
 </body>
