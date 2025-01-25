@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let count = 0;
+        function vowel(str) {
+            let vowelArray = ['a', 'e', 'i', 'o', 'u'];
+            for (let i = 0; i < str.length; i++) {
+                if ( vowelArray.includes(str[i])) {
+                    count++;
+                }
+            }
+        }
+
+        vowel("ankitmallik");
+        console.log(count);
+
+
+
+    </script>
+
+
+    <script>
+        let arr = ["new york", "London", "Tokyo", "Paris", "Sydney", "Dubai", "Mumbai", "Toronto", "Berlin", "Singapore"];
+        arr.forEach((val,idx,arr)=> {
+            console.log(val.toUpperCase(),idx,arr);
+
+        }
+        );
+
+    </script>
+</body>
+
+</html>
