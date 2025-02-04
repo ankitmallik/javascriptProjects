@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Layout</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #1e1e2f, #3d3d5c, #2f2f4f, #4a4a7a);
+            background-size: 300% 300%;
+            animation: gradientBg 8s infinite linear;
+        }
+
+        @keyframes gradientBg {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            text-align: center;
+            border-radius: 20px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            position: relative;
+            animation: moveAround 6s infinite ease-in-out;
+        }
+
+        @keyframes moveAround {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            25% {
+                transform: translate(-30px, 20px);
+            }
+
+            50% {
+                transform: translate(30px, -20px);
+            }
+
+            75% {
+                transform: translate(-20px, -30px);
+            }
+
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+
+        h1 {
+            grid-column: span 2;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            animation: colorShift 4s infinite ease-in-out;
+        }
+
+        @keyframes colorShift {
+
+            0%,
+            100% {
+                color: #ff6a6a;
+            }
+
+            50% {
+                color: white;
+            }
+        }
+
+        .profile-img {
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            border: 6px solid white;
+            animation: bounce 2s infinite ease-in-out;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 150px;
+            width: 250px;
+            border-radius: 20px;
+            background: #118B50;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+            transform: translateY(0);
+            animation: float 5s infinite ease-in-out;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        .name {
+            font-size: 2rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            background: #6E8E59;
+            background-clip: text;
+            -webkit-background-clip: text;
+
+            position: relative;
+            text-shadow:
+                2px 2px 5px black,
+                /* Adds a dark outline */
+                0 5px 15px rgba(255, 255, 255, 0.5);
+            animation: colorfulName 3s infinite alternate ease-in-out;
+        }
+
+        @keyframes colorfulName {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .profile-container img {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>New Follower</h1>
+        <img src="./images/prt.png" alt="Profile Image" class="profile-img">
+        <div class="container">
+            <div class="profile-container">
+                <img src="./images/v982-d3-04.jpg" alt="Profile">
+            </div>
+            <span class="name">Pratyush Karn</span>
+        </div>
+    </div>
+</body>
+
+</html>

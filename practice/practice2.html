@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let user = prompt('give me a number');
+        let arr = [];
+        for (let index = 1; index <= user; index++) {
+
+            arr[index-1] = index;
+        }
+
+        console.log(arr);
+
+        let sum = arr.reduce((result, value) => {
+            return result + value;
+        })
+        console.log(sum);
+
+        let mul = arr.reduce((result,value)=>
+    {
+        return result * value;
+    })
+    console.log(mul);
+    
+    </script>
+
+
+
+
+</body>
+
+</html>

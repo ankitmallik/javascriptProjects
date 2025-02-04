@@ -1,0 +1,60 @@
+*
+{
+   
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    border: 2px solid red;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+}
+.row
+
+{
+   flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+    
+}
+.col-1
+
+{
+    border-radius: 100px 20px 20px 20px;
+    height: 90vh;
+    width: 50%;
+    background-color: aquamarine;
+    background-image: url('https://rukminim2.flixcart.com/image/850/1000/xif0q/poster/h/x/w/medium-poster-design-no-3323-ironman-poster-ironman-posters-for-original-imaggbycsxynxhak.jpeg?q=90&crop=false');
+}
+.port
+
+{
+    width: 50%;
+    font-size: 70px;
+   font-weight: 800;
+}
+.video
+{
+    border-radius: 10px;
+    height: 220px;
+    width: 280px;
+    background-color: red;
+  background-image: url('https://i.pinimg.com/236x/5e/9a/05/5e9a0599b298390425310ac88c91760f.jpg');
+
+}
+.projects
+{
+   
+    height: 100px;
+    width: 100px;
+    background-color: green;
+    background-image: url('https://wallpapers.com/images/featured/iron-man-ouqxo5w2b59h0042.jpg');
+}
+.alg
+{
+    
+    justify-content: space-between;
+display: flex;
+}

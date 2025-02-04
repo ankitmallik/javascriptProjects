@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Remove Duplicates from an Array
+        Write a function that removes duplicate values from an array and returns a new array.</h1>
+
+    <script>
+        const arr = [
+            'ankit',
+            'prtyush',
+            'anshu',
+            'piyushkarn',
+            'sumitmallik'
+        ];
+
+        let len = 0;
+        let name = '';
+
+        for (let ele of arr) {
+            if (ele.length > len) {
+                name = ele;
+                len = ele.length;
+            }
+        }
+
+        console.log("Max Len :",len);
+        console.log("Max Number :",name)
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+body
+{
+  height: 100vh;
+  width: 100vw;
+}
+.box
+{
+  height: 100px;
+  width: 100px;
+  background-color: rgb(153, 240, 153);
+  text-align: center;
+  margin: 5px;
+}
