@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+
+            background-color: bisque;
+            display: flex;
+            height: 250px;
+            width: 250px;
+            align-items: center;
+
+            flex-direction: column;
+            gap: 20px;
+padding: 20px;
+border-radius: 5px;
+
+        }
+
+        input {
+            height: 40px;
+            width: 200px;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .generate {
+            width: 200px;
+            height: 50px;
+            background-color: darkslategray;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <input type="text">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Example" alt="" srcset="">
+        <button class="generate">Generate</button>
+    </div>
+
+    <script>
+        const input = document.querySelector("input");
+        const img = document.querySelector("img");
+        const button = document.querySelector("button");
+        button.addEventListener("click", () => {
+            img.src = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + input.value;
+            input.value = "";
+        })
+
+
+    </script>
+</body>
+
+</html>
